@@ -4,8 +4,6 @@ model:
   # vit encoder
   image_size: 224
   drop_path_rate: 0
-  use_grad_checkpoint: False
-  vit_precision: "fp16"
   freeze_vit: True
   freeze_qformer: True
 
@@ -28,6 +26,5 @@ preprocess:
           image_size: 224
     text_processor:
         train:
-          name: "blip_caption"
         eval:
           name: "blip_caption"
